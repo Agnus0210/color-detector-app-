@@ -42,7 +42,7 @@ if uploaded_file:
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
     # Display image using Streamlit and capture click coordinates
-    st.image(img_rgb, caption="Click on the image below", use_column_width=True)
+    st.image(img_rgb, caption="Click on the image below", use_container_width=True)
 
     click_x = st.number_input("X Coordinate", min_value=0, max_value=img.shape[1]-1, step=1)
     click_y = st.number_input("Y Coordinate", min_value=0, max_value=img.shape[0]-1, step=1)
